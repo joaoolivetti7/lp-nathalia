@@ -36,6 +36,8 @@ body{
   margin: 0 auto;
 }
 
+/* *** GERAL *** */
+
 span{
   color: var(--show);
 }
@@ -47,6 +49,7 @@ span{
   border-radius: 10px;
   text-transform: uppercase;
   font-weight: 700;
+  font-size: 20px;
 }
 
 .gold{
@@ -57,6 +60,29 @@ span{
 .blue{
   background-color: var(--primary-white);
 }
+
+.container-title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-left: 7rem;
+}
+
+.container-title h3 {
+  color: var(--show);
+  margin: 0;
+  margin-top: 50px;
+  font-size: 1rem;
+}
+
+.container-title h1 {
+  color: var(--text);
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 3rem;
+}
+
 
 /*INICIO HEADER*/
 
@@ -97,4 +123,60 @@ li{
   align-items: center;
   flex-wrap: wrap;
   gap: 5rem;
+}
+
+/*INICIO SESSAO 02*/
+
+.section-02 .container-contact{
+  margin-top: 10px;
+  text-align: center;
+}
+
+/*INICIO SESSAO 03*/
+
+.section-03 .content-about{
+  text-align: center;
+  background-color: var(--primary-white);
+  border-radius: 30px;
+  height: 400px;
+  max-width: 70%;
+  margin-left: 35vh;
+  margin-bottom: 50px;
+}
+
+.content-about p{
+  margin: 30px;
+  font-size: 20px;
+}
+
+.container-about .button-contact{
+  background-color: var(--primary);
+}
+
+/*INICIO SESSAO 04*/
+
+.section-04{
+  background-color: var(--primary-white);
+  
+}
+
+.content-loc{
+  display: flex;
+  padding-bottom: 30px;
+  justify-content: center;
+}
+
+iframe{
+  border-radius: 40px;
+  margin-right: 20px;
+}
+
+.endereco .container-contact{
+  margin-top: 50px;
+}
+
+/*INICIO FOOTER*/
+
+footer{
+  text-align: center;
 }
