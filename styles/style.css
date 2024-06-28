@@ -83,6 +83,9 @@ span{
   font-size: 3rem;
 }
 
+h2{
+  font-weight: 300;
+}
 
 /*INICIO HEADER*/
 
@@ -140,6 +143,36 @@ li{
   margin-top: 10px;
   text-align: center;
 }
+
+.container-slides {
+  margin: 1rem 0;
+  padding: 0 2rem;
+  background: var(--primary-white);
+}
+
+.container-slides .glide__slide {
+  border-right: 2px solid rgba(255, 255, 255, 0.342);
+  flex: 1;
+  padding: 1rem;
+  transition: 0.2s;
+  height: 200px;
+}
+
+.container-slides .glide__slide:hover {
+  transform: scale(1.02);
+}
+
+ul.glide__slides {
+  padding: 0.5rem 0;
+  align-items: center;
+}
+
+.glide-arrows{
+  position: relative;
+  right: 0;
+  left: 0;
+}
+
 
 /*INICIO SESSAO 03*/
 
