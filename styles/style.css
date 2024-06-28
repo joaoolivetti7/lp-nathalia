@@ -101,6 +101,15 @@ header img{
   text-transform: uppercase;
 }
 
+ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header-list ul li a:visited {
+  color: inherit;
+}
+
 li{
   margin: 1rem;
 }
@@ -137,7 +146,7 @@ li{
 .section-03 .content-about{
   text-align: center;
   background-color: var(--primary-white);
-  border-radius: 30px;
+  border-radius: 60px;
   height: 400px;
   max-width: 70%;
   margin-left: 35vh;
@@ -145,8 +154,8 @@ li{
 }
 
 .content-about p{
-  margin: 30px;
   font-size: 20px;
+  margin: 0px 50px 50px 50px;
 }
 
 .container-about .button-contact{
