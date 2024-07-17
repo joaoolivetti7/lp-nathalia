@@ -42,13 +42,6 @@ body{
   margin: 0;
 }
 
-@media (max-width: 768px) {
-  html, body {
-    overflow-x: hidden; /* Evita rolagem horizontal */
-  }
-}
-
-
 /* *** GERAL *** */
 
 span{
