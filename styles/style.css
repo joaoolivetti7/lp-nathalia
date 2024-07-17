@@ -83,6 +83,24 @@ span{
   font-size: 3rem;
 }
 
+@media (max-width: 768px) {
+  .container-title {
+    margin-left: 2rem;
+    gap: 1rem;
+  }
+
+  .container-title h3 {
+    font-size: 0.875rem; /* Ajuste do tamanho da fonte para melhor legibilidade */
+    margin-top: 50px; /* Redução da margem superior */
+  }
+
+  .container-title h1 {
+    font-size: 2rem; /* Ajuste do tamanho da fonte para melhor legibilidade */
+    margin-top: 5px; /* Redução da margem superior */
+    margin-bottom: 50px; /* Redução da margem inferior */
+  }
+}
+
 h2{
   font-weight: 300;
 }
@@ -94,11 +112,12 @@ header{
   height: 8rem;
 }
 
-header img{
-  position: absolute;
+.header-list{
+  margin-left: 15%;
+  margin-top: 20px;
 }
 
-.header-list{
+.list{
   list-style: none;
   display: flex;
   text-transform: uppercase;
@@ -109,7 +128,7 @@ ul li a {
   color: inherit;
 }
 
-.header-list ul li a:visited {
+.list ul li a:visited {
   color: inherit;
 }
 
@@ -117,11 +136,43 @@ li{
   margin: 1rem;
 }
 
+@media (max-width: 768px) {
+  header {
+    display: none;
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+  }
+
+  header img{
+    display: none;
+  }
+
+  .header-list {
+    margin-left: 0;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .list li {
+    margin-left: 0;
+  }
+}
+
+
+
 /*INICIO SESSÃO 01*/
 
 .section-01{
-  background-color: rgba(0, 0, 0, 0.795);
+  background-color: rgb(0, 0, 0);
   background-image: url("../assets/img/banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100vh;
   display: flex;
 }
@@ -129,12 +180,42 @@ li{
 .content-overlay{
   height: 100%;
   width: 100%;
-  background: rgba(0, 0, 0, 0.671);
+
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 5rem;
+}
+
+.container-title-01 h1{
+  font-size: 30pt;
+}
+
+@media (max-width: 768px) {
+  .section-01 {
+    height: auto;
+    padding: 20px;
+  }
+
+  .container-logo img{
+    width: 350px;
+  }
+
+  .content-overlay {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .container-title-01{
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .container-title-01 h1{
+    font-size: 24pt;
+    text-align: center;
+  }
 }
 
 /*INICIO SESSAO 02*/
@@ -167,10 +248,46 @@ ul.glide__slides {
   align-items: center;
 }
 
-.glide-arrows{
-  position: relative;
-  right: 0;
-  left: 0;
+.glide-arrow{
+  display: flex;
+  justify-content: center;
+}
+
+.glide__arrow{
+  
+  background-color: var(--primary-white);
+  border: none;
+  margin-right: 5px;
+  margin-bottom: 0;
+}
+
+.glide__arrow:hover{
+  cursor: pointer;
+  transform: scale(1.10);
+  border-radius: 10px;
+}
+
+.inform{
+  text-align: center;
+  font-size: 12px;
+}
+
+.container-contact-slide {
+  margin-top: 30px;
+  text-decoration: none;
+  color: inherit;
+  padding: 0.7rem;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .container-slides .glide__slide{
+    border: none;
+  }
 }
 
 
@@ -188,12 +305,38 @@ ul.glide__slides {
 
 .content-about p{
   font-size: 20px;
+  padding-top: 50px;
   margin: 0px 50px 50px 50px;
 }
 
 .container-about .button-contact{
   background-color: var(--primary);
 }
+
+@media (max-width: 768px) {
+  .section-03 .content-about {
+    max-width: 90%;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: auto;
+    padding: 20px;
+    padding-bottom: 50px;
+    border-radius: 30px;
+  }
+
+  .content-about p {
+    font-size: 18px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 10px 10px 10px 10px;
+  }
+
+  .container-about .button-contact {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
 
 /*INICIO SESSAO 04*/
 
@@ -217,8 +360,40 @@ iframe{
   margin-top: 50px;
 }
 
+@media (max-width: 768px) {
+  .section-04 {
+    padding-bottom: 20px;
+  }
+
+  .content-loc {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  iframe {
+    margin-right: 0;
+    margin-bottom: 20px;
+    width: 100%; /* Ajusta a largura para se adaptar à tela menor */
+    text-align: center;
+  }
+
+  .endereco .container-contact {
+    margin-top: 30px;
+    text-align: center;
+  }
+}
+
 /*INICIO FOOTER*/
 
 footer{
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  footer {
+    text-align: center;
+    padding: 10px;
+  }
 }
