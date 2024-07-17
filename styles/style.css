@@ -138,7 +138,6 @@ li{
 
 @media (max-width: 768px) {
   header {
-    display: none;
     flex-direction: column;
     height: auto;
     text-align: center;
