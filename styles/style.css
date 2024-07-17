@@ -168,7 +168,7 @@ li{
 /*INICIO SESSÃO 01*/
 
 .section-01{
-  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.76);
   background-image: url("../assets/img/banner.png");
   background-repeat: no-repeat;
   background-size: cover;
