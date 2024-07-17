@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 :root {
   --primary: #112431;
   --primary-white: #142B3B;
@@ -33,7 +39,12 @@ body{
   font-family: "Inria Sans";
   background-color: var(--primary);
   color: var(--secondary);
-  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden; /* Evita rolagem horizontal */
+  }
 }
 
 /* *** GERAL *** */
@@ -114,7 +125,7 @@ header{
 
 .header-list{
   margin-left: 15%;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .list{
@@ -140,7 +151,7 @@ li{
   header {
     flex-direction: column;
     height: auto;
-    text-align: center;
+    margin-bottom: 20px;
   }
 
   header img{
@@ -153,14 +164,16 @@ li{
     text-align: center;
   }
 
+  ul{
+
+  }
+
   .list {
     flex-direction: column;
     align-items: center;
   }
 
-  .list li {
-    margin-left: 0;
-  }
+
 }
 
 
@@ -179,7 +192,6 @@ li{
 .content-overlay{
   height: 100%;
   width: 100%;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -189,6 +201,7 @@ li{
 
 .container-title-01 h1{
   font-size: 30pt;
+  margin-bottom: 50px;
 }
 
 @media (max-width: 768px) {
@@ -269,6 +282,7 @@ ul.glide__slides {
 .inform{
   text-align: center;
   font-size: 12px;
+  margin-bottom: 20px;
 }
 
 .container-contact-slide {
@@ -388,6 +402,7 @@ iframe{
 
 footer{
   text-align: center;
+  padding: 10px;
 }
 
 @media (max-width: 768px) {
