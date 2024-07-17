@@ -328,7 +328,7 @@ ul.glide__slides {
 
 @media (max-width: 768px) {
   .section-03 .content-about {
-    max-width: 90%;
+    max-width: 100%;
     margin-left: 10px;
     margin-right: 10px;
     height: auto;
