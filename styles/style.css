@@ -31,7 +31,7 @@
 }
 
 html {
-  overflow-x: ;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -40,6 +40,12 @@ body{
   background-color: var(--primary);
   color: var(--secondary);
   margin: 0;
+}
+
+@media (max-width: 768px) {
+  html, body{
+    overflow-x: hidden;
+  }
 }
 
 /* *** GERAL *** */
@@ -182,7 +188,6 @@ li{
 
 @media (max-width: 768px) {
   header {
-    
     align-items: center;
     padding: 1rem;
     position: relative;
@@ -249,8 +254,8 @@ li{
 @media (max-width: 768px) {
   .section-01 {
     height: auto;
+    width: auto;
     padding: 20px;
-
   }
 
   .container-logo img{
