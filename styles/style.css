@@ -31,7 +31,7 @@
 }
 
 html {
-  overflow-x: hidden;
+  overflow-x: ;
   scroll-behavior: smooth;
 }
 
@@ -113,17 +113,23 @@ h2{
 
 /*INICIO HEADER*/
 
-header{
+ header{
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   height: 8rem;
 }
 
-.header-list{
-  margin-left: 15%;
+.container-logo-header{
   margin-top: 30px;
 }
 
-.list{
+.header-list{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header-list{
   list-style: none;
   display: flex;
   text-transform: uppercase;
@@ -142,32 +148,77 @@ li{
   margin: 1rem;
 }
 
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+@keyframes ascending {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes descending {
+  from {
+    transform: scaleY(1);
+  }
+  to {
+    transform: scaleY(0);
+  }
+}
+
+.ascending {
+  animation: ascending .2s;
+}
+
+.descending {
+  animation: descending .2s;
+}
+
 @media (max-width: 768px) {
   header {
-    flex-direction: column;
-    height: auto;
-    margin-bottom: 20px;
+    
+    align-items: center;
+    padding: 1rem;
+    position: relative;
+    will-change: height;
+  }
+
+  .container-logo-header{
+    padding: 0;
+    margin: 0;
   }
 
   header img{
+    width: 220px;
+  }
+
+  header ul {
     display: none;
-  }
-
-  .header-list {
-    margin-left: 0;
-    margin-top: 10px;
-    text-align: center;
-  }
-
-  .list {
     flex-direction: column;
+    gap: 2rem;
+    width: 100%;
     align-items: center;
+    padding: 0;
+    position: absolute;
+    top: 86%;
+    width: 100vw;
+    left: 0;
+    padding-bottom: 1rem;
+    transform-origin: top;
+    background-color: var(--primary);
   }
 
+  .menu-icon {
+    display: flex;
+  }
 
 }
-
-
 
 /*INICIO SESSÃO 01*/
 
@@ -261,8 +312,9 @@ ul.glide__slides {
   
   background-color: var(--primary-white);
   border: none;
-  margin-right: 5px;
-  margin-bottom: 0;
+  margin: 15px;
+  margin-top: 0;
+  margin-bottom: 5px;
 }
 
 .glide__arrow:hover{
@@ -298,20 +350,22 @@ ul.glide__slides {
 
 /*INICIO SESSAO 03*/
 
-.section-03 .content-about{
+.content-about{
+  width: auto;
+  height: auto;
   text-align: center;
   background-color: var(--primary-white);
   border-radius: 60px;
-  height: 400px;
   max-width: 70%;
-  margin-left: 35vh;
-  margin-bottom: 50px;
+  margin-left: 34vh;
+  margin-bottom: 20px;
+  padding-bottom: 40px;
 }
 
 .content-about p{
   font-size: 20px;
-  padding-top: 50px;
-  margin: 0px 50px 50px 50px;
+  padding-top: 40px;
+  margin: 30px;
 }
 
 .container-about .button-contact{
@@ -384,8 +438,14 @@ iframe{
     text-align: center;
   }
 
-  .endereco .container-contact {
+  .container-contact {
     margin-top: 30px;
+    text-align: center;
+  }
+
+  .endereco{
+    padding: 30px;
+    margin: 0;
     text-align: center;
   }
 }
