@@ -191,6 +191,7 @@ li{
 
 @media (max-width: 768px) {
   header {
+    display: flex;
     align-items: center;
     padding: 1rem;
     position: relative;
@@ -206,7 +207,7 @@ li{
     width: 220px;
   }
 
-  header ul {
+  .header-list {
     display: none;
     flex-direction: column;
     gap: 2rem;
@@ -223,6 +224,10 @@ li{
   }
 
   .menu-icon {
+    display: flex;
+  }
+
+  .header-list.ascending {
     display: flex;
   }
 

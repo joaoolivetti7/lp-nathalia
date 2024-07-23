@@ -16,12 +16,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }).mount();
 
     const icon = document.querySelector(".menu-icon");
+    const menu = document.getElementById("header-list");
+    let isOpen = false;
+    let timeout;
 
-  let isOpen = false;
-  let timeout;
+    menu.style.display = "none";
 
   icon.addEventListener("click", () => {
-    const menu = document.getElementById("header-list");
+    
     if (!isOpen) {
       menu.classList.add("ascending");
       menu.classList.remove("descending");
